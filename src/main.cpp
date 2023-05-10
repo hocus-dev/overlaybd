@@ -433,7 +433,7 @@ int main(int argc, char **argv) {
     std::vector<struct tcmulib_handler> handlers;
     struct tcmulib_handler overlaybd_handler;
     overlaybd_handler.name = "Handler for overlaybd devices";
-    overlaybd_handler.subtype = "overlaybd";
+    overlaybd_handler.subtype = imgservice->global_conf.tcmuSubtype().data();
     overlaybd_handler.cfg_desc = "overlaybd bs";
     overlaybd_handler.check_config = nullptr;
     overlaybd_handler.added = dev_open;

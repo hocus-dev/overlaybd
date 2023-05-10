@@ -3,8 +3,8 @@ set(FETCHCONTENT_QUIET false)
 
 FetchContent_Declare(
   tcmu
-  GIT_REPOSITORY https://github.com/data-accelerator/photon-libtcmu.git
-  GIT_TAG main
+  GIT_REPOSITORY https://github.com/hocus-dev/photon-libtcmu.git
+  GIT_TAG hocus
 )
 
 if(BUILD_TESTING)

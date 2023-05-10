@@ -10,8 +10,6 @@ LimitNOFILE=1048576
 LimitCORE=infinity
 Type=simple
 
-ExecStartPre=/sbin/modprobe target_core_user
-
 ExecStart=/opt/overlaybd/bin/overlaybd-tcmu
 
 GuessMainPID=no

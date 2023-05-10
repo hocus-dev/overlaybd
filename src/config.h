@@ -125,6 +125,7 @@ struct PrefetchConfig : public ConfigUtils::Config {
 struct GlobalConfig : public ConfigUtils::Config {
     APPCFG_CLASS
 
+    APPCFG_PARA(tcmuSubtype, std::string, "overlaybd-hocus");
     APPCFG_PARA(registryCacheDir, std::string, "/opt/overlaybd/registry_cache");
     APPCFG_PARA(credentialFilePath, std::string, "/opt/overlaybd/cred.json");
     APPCFG_PARA(credentialConfig, CredentialConfig)
