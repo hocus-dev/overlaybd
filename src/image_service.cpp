@@ -175,6 +175,10 @@ int ImageService::read_global_config_and_set() {
         LOG_ERROR_RETURN(0, -1, "unknown io_engine: `", ioengine);
     }
 
+    if (global_conf.tcmuSubtype().length() > 15) {
+        LOG_ERROR_RETURN(0, -1, "TCMU subtype too long, max 15 chars: `", global_conf.tcmuSubtype());
+    }
+
     if (global_conf.enableAudit()) {
         std::string auditPath = global_conf.auditPath();
         if (auditPath == "") {
